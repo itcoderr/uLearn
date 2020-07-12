@@ -1,0 +1,18 @@
+html{
+    margin: 30px;
+}
+
+.carousel-control-prev {
+    height: 50%;
+    top: 20%;
+    bottom: 20%;
+    width: 80px;
+    
+}
+
+.carousel-control-next{
+    height: 50%;
+    top: 20%;
+    bottom: 20%;
+    width: 80px;
+}

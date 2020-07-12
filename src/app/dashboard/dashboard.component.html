@@ -1,0 +1,23 @@
+<html>
+    
+   
+    
+
+    <div class="profileSelect">
+        <button type="button" [class]="something1" id="student" (click)="active()" >Learner</button>
+        <button type="button" [class]="something2" id="tutor" (click)="active()" >Facilitator</button>
+    </div>
+
+
+    <div *ngIf="profileselect" class="tutor-dashboard">
+        <app-tutor-dashboard></app-tutor-dashboard>
+    </div>
+    <div *ngIf="!profileselect" class="student-dashboard">
+        <app-student-dashboard></app-student-dashboard>
+    </div>
+    
+
+</html>
+
+
+

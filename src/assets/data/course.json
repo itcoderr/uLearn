@@ -1,0 +1,35 @@
+{
+    "tutor" : [
+        {"id": 1,"Name":"Pankaj","Age":21,"CourseName": "Algorithms"},
+        {"id": 2,"Name":"Anusha","Age":21,"CourseName": "DS"},
+        {"id": 3,"Name":"Suraj","Age":21,"CourseName": "Algorithms"},
+        {"id": 4,"Name":"Rahul","Age":21,"CourseName": "C++"},
+        {"id": 5,"Name":"Ranjeet","Age":21,"CourseName": "Database"},
+        {"id": 6,"Name":"Pallavi","Age":21,"CourseName": "Database"},
+        {"id": 7,"Name":"Shraddha","Age":21,"CourseName": "Backend"}
+    ],
+    "student" : [
+        {"id": 1,"Name":"Rahul","Age":21,"CourseName": "C++"},
+        {"id": 2,"Name":"Anusha","Age":21,"CourseName": "DS"},
+        {"id": 3,"Name":"Suraj","Age":21,"CourseName": "Algorithms"},
+        {"id": 4,"Name":"Pankaj","Age":21,"CourseName": "Algorithms"},
+        {"id": 5,"Name":"Ranjeet","Age":21,"CourseName": "Database"}
+    ],
+    "course" : [
+        {"id": 1,"Name":"Pankaj","Age":21,"CourseName": "Algorithms"},
+        {"id": 2,"Name":"Anusha","Age":21,"CourseName": "DS"},
+        {"id": 3,"Name":"Suraj","Age":21,"CourseName": "Algorithms"},
+        {"id": 4,"Name":"Rahul","Age":21,"CourseName": "C++"},
+        {"id": 5,"Name":"Ranjeet","Age":21,"CourseName": "Database"},
+        {"id": 6,"Name":"Pallavi","Age":21,"CourseName": "Database"},
+        {"id": 7,"Name":"Shraddha","Age":21,"CourseName": "Backend"},
+        {"id": 8,"Name":"Random","Age":21,"CourseName": "Backend"},
+        {"id": 9,"Name":"Suraj","Age":21,"CourseName": "Algorithms"},
+        {"id": 10,"Name":"Rahul","Age":21,"CourseName": "C++"},
+        {"id": 11,"Name":"Ranjeet","Age":21,"CourseName": "Database"},
+        {"id": 12,"Name":"Pallavi","Age":21,"CourseName": "Database"},
+        {"id": 13,"Name":"Shraddha","Age":21,"CourseName": "Backend"},
+        {"id": 14,"Name":"Random","Age":21,"CourseName": "Backend"}
+    ]
+}
+

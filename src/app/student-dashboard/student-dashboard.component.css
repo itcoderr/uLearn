@@ -1,0 +1,8 @@
+.courses{
+    float: left;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+.card{
+    background-image: linear-gradient(to right top, #eec789, #e7d199, #e2daaa, #e0e2bd, #e1e9cf);
+}

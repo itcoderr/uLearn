@@ -1,0 +1,23 @@
+html{
+    padding: 20px;
+}
+
+.profileSelect{
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+
+.form-control.mr-sm-2{
+    float: left;
+}
+#student,#tutor{
+    height: 50px;
+    width: 100px;
+    text-align: center;
+    float: right;
+}
+
+#search{
+    width: 500px;
+    height: 50px;
+}

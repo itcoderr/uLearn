@@ -1,0 +1,24 @@
+
+{{errorMsg}}
+<div class="jumbotron">
+    <h1 class="display-4">FACILITATOR</h1>
+    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+    <hr class="my-4">
+    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+    <a class="btn btn-primary btn-lg"  role="button" style="margin: 10px;">Add new course</a>
+    <a class="btn btn-primary btn-lg"  role="button" (click)="showCourses = true">Already created courses</a>
+  </div>
+
+
+<div class="showCourses" *ngIf="showCourses">
+  <div class="courses" *ngFor="let coursedatas of coursedata['tutor']">
+    <div class="card" style="width: 18rem;">
+      <img src="../../assets/Demo.png" class="card-img-top" alt="...">
+      <div class="card-body">
+          <h5 class="card-title">{{coursedatas.CourseName}}</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+     </div>
+    </div>
+  </div>
+</div>

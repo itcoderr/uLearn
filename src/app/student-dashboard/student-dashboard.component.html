@@ -1,0 +1,38 @@
+
+{{errorMsg}}
+<div class="jumbotron">
+    <h1 class="display-4">LEARNER</h1>
+    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+    <hr class="my-4">
+    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+    <a class="btn btn-primary btn-lg"  role="button" (click)="exploreCourses = true; showenrolledCourses = false" style="margin: 10px;">Explore all courses</a>
+    <a class="btn btn-primary btn-lg"  role="button" (click)="showenrolledCourses = true; exploreCourses = false">See enrolled courses</a>
+</div>
+
+
+<div class="showCourses" *ngIf="showenrolledCourses">
+  <div class="courses" *ngFor="let coursedatas of coursedata['student']">
+    <div class="card" style="width: 18rem;">
+      <img src="../../assets/Demo.png" class="card-img-top" alt="...">
+      <div class="card-body">
+          <h5 class="card-title">{{coursedatas.CourseName}}</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+     </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="showCourses" *ngIf="exploreCourses">
+  <div class="courses" *ngFor="let coursedatas of coursedata['course']">
+    <div class="card" style="width: 18rem;">
+      <img src="../../assets/demo1.png" class="card-img-top" alt="...">
+      <div class="card-body">
+          <h5 class="card-title">{{coursedatas.CourseName}}</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+     </div>
+    </div>
+  </div>
+</div>
