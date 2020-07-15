@@ -1,18 +1,37 @@
-html{
-    margin: 30px;
+.container{
+    margin: 20px;
+    margin-left: 80px;
 }
 
-.carousel-control-prev {
-    height: 50%;
-    top: 20%;
-    bottom: 20%;
+.spinners{
+    height: 350px;
+    width: 1000x;
+    text-align: center;
+}
+
+.d-flex.justify-content-center{
+    margin-top: 200px;
+}
+
+.carousel-control-prev{
+    top: 10%;
+    bottom: 30%;
     width: 80px;
-    
+    background:none;
 }
 
 .carousel-control-next{
-    height: 50%;
-    top: 20%;
-    bottom: 20%;
+    top: 10%;
+    bottom: 30%;
     width: 80px;
+    background: none;
+}
+
+#enrollbutton{
+   margin-left: 20px;
+}
+
+.topicvideos{
+    width: 600px;
+    margin-left: 270px;
 }
