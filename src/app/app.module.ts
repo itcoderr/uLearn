@@ -14,6 +14,7 @@ import { TutorDashboardComponent } from './tutor-dashboard/tutor-dashboard.compo
 import { SocialLoginModule, SocialAuthServiceConfig } from 'angularx-social-login';
 import { GoogleLoginProvider } from 'angularx-social-login';
 import { AllcoursesComponent } from './allcourses/allcourses.component';
+import { TopicComponent } from './topic/topic.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { AllcoursesComponent } from './allcourses/allcourses.component';
     DashboardComponent,
     StudentDashboardComponent,
     TutorDashboardComponent,
-    AllcoursesComponent
+    AllcoursesComponent,
+    TopicComponent
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,4 @@
+import { TopicComponent } from './topic/topic.component';
 import { AllcoursesComponent } from './allcourses/allcourses.component';
 import { StudentDashboardComponent } from './student-dashboard/student-dashboard.component';
 import { TutorDashboardComponent } from './tutor-dashboard/tutor-dashboard.component';
@@ -12,7 +13,8 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'tutor', component: TutorDashboardComponent },
   { path: 'student', component: StudentDashboardComponent },
-  { path: 'allcourses', component: AllcoursesComponent }
+  { path: 'allcourses', component: AllcoursesComponent },
+  { path: 'allcourses/topic', component: TopicComponent }
 ];
 
 @NgModule({

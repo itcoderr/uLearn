@@ -18,6 +18,8 @@ export class ELearningNavbarComponent implements OnInit{
   userobj = true;
 
   errormsg : any;
+
+  myStorage = window.localStorage;
   
   constructor(private authService: SocialAuthService,private apiService: ApiService) { }
 
@@ -44,6 +46,11 @@ export class ELearningNavbarComponent implements OnInit{
   }
 
   sendSignInObject(){
+
+    localStorage.setItem('email',this.user.email);
+    localStorage.setItem('googleID',this.user.id);
+    localStorage.setItem('name',this.user.name);
+    localStorage.setItem('photo',this.user.photoUrl);
     
     var customer ={
 
@@ -70,7 +77,7 @@ export class ELearningNavbarComponent implements OnInit{
 
   }
   sendSignOutObject(){
-     
+      localStorage.clear();
      this.apiService.signout(this.customer1).subscribe((res)=>{
       this.errormsg = res;
     });

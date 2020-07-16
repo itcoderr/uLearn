@@ -1,4 +1,3 @@
-import { async } from '@angular/core/testing';
 import { ApiService } from './../api.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -13,9 +12,16 @@ export class AllcoursesComponent implements OnInit {
   courseincategory =[];
   userobj=false;
   looprun=[];
+  googleID : string;
+  googleName : string;
+  courseID : string;
+  courseName : string;
+  
+  
   constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
+
 
     //this.apiService.getAllCategory().subscribe( data => this.coursecategory = data);
 
@@ -55,6 +61,24 @@ export class AllcoursesComponent implements OnInit {
       console.log(this.courseincategory);
       console.log(this.looprun);
       this.userobj=true;
+  }
+
+  async getgoogleID(cid : string){
+    this.courseID = cid ;
+    this.googleID = localStorage.getItem('googleID');
+    this.googleName = localStorage.getItem('name');
+    localStorage.setItem('courseID' , this.courseID);
+    console.log(this.googleID+' '+this.courseID);
+    var res : any;
+    res = await this.apiService.enrollcourses(this.googleID,this.courseID);
+    console.log(res + ' ' + this.googleID);
+  }
+
+  getCourseID(cid : string ,cname : string){
+    this.courseID = cid ; 
+    this.courseName = cname ; 
+    localStorage.setItem('courseID' , this.courseID);
+    localStorage.setItem('courseName' , this.courseName);
   }
 
 }

@@ -35,8 +35,12 @@ public getallcoursesincategory(categoryid : string){
   return this.httpClient.get(`http://localhost:8080/getallcoursesincategory?catID=${categoryid}`, httpOptions).toPromise();
 }
 
-public getUser(googleID : string){
-  return this.httpClient.get('http://localhost:8080/get', httpOptions);
+public getAllTopics(courseid : string){
+  return this.httpClient.get(`http://localhost:8080/getalltopics?courseID=${courseid}`, httpOptions).toPromise();
+}
+
+public enrollcourses(googleid : string,courseid : string){
+  return this.httpClient.post(`http://localhost:8080/enrollcourses?googleID=${googleid}&courseID=${courseid}`, httpOptions).toPromise();
 }
 
 public deleteUser(googleID : string){
