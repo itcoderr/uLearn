@@ -11,10 +11,11 @@ export class TopicComponent implements OnInit {
   courseID : string;
   courseName : string;
   courses : any;
-  
+  object : boolean = true;
   constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
+    
 
     this.courseID = localStorage.getItem('courseID');
     this.courseName = localStorage.getItem('courseName');
@@ -27,6 +28,12 @@ export class TopicComponent implements OnInit {
   async getTopic() {
     this.courses = await this.apiService.getAllTopics(this.courseID);
     console.log(this.courses);
+    this.object=false;
+  }
+
+  getquizID(quizid : string,topicname : string){
+    localStorage.setItem('quizID',quizid);
+    localStorage.setItem('topicName',topicname);
   }
 
 }

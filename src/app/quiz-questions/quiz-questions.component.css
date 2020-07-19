@@ -1,0 +1,28 @@
+.quiz{
+    margin: 20px;
+    padding-top: 50px;
+    margin-left: 200px;
+    width: 1000px;
+    background-color: white;
+    text-align: center;
+}
+
+.quiz-class{
+    align-items: center;
+    background-color: rgb(170, 217, 255);
+    
+}
+
+.quizoptions{
+    margin-right: 100px;
+    text-align: left;
+    padding-left: 100px;
+}
+
+.prev-next{
+    margin-left: 0px;
+}
+
+.options{
+    width: 500px;
+}

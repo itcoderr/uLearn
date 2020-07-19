@@ -15,6 +15,10 @@ import { SocialLoginModule, SocialAuthServiceConfig } from 'angularx-social-logi
 import { GoogleLoginProvider } from 'angularx-social-login';
 import { AllcoursesComponent } from './allcourses/allcourses.component';
 import { TopicComponent } from './topic/topic.component';
+import { QuizIntroComponent } from './quiz-intro/quiz-intro.component';
+import { QuizQuestionsComponent } from './quiz-questions/quiz-questions.component';
+import { QuizResultComponent } from './quiz-result/quiz-result.component';
+import { CertificateComponent } from './certificate/certificate.component';
 
 
 @NgModule({
@@ -27,7 +31,11 @@ import { TopicComponent } from './topic/topic.component';
     StudentDashboardComponent,
     TutorDashboardComponent,
     AllcoursesComponent,
-    TopicComponent
+    TopicComponent,
+    QuizIntroComponent,
+    QuizQuestionsComponent,
+    QuizResultComponent,
+    CertificateComponent
   ],
   imports: [
     BrowserModule,

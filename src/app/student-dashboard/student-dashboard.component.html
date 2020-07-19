@@ -1,38 +1,42 @@
-
-{{errorMsg}}
-<div class="jumbotron">
-    <h1 class="display-4">LEARNER</h1>
-    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-    <hr class="my-4">
-    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-    <a class="btn btn-primary btn-lg"  role="button" (click)="exploreCourses = true; showenrolledCourses = false" style="margin: 10px;">Explore all courses</a>
-    <a class="btn btn-primary btn-lg"  role="button" (click)="showenrolledCourses = true; exploreCourses = false">See enrolled courses</a>
-</div>
-
-
-<div class="showCourses" *ngIf="showenrolledCourses">
-  <div class="courses" *ngFor="let coursedatas of coursedata['student']">
-    <div class="card" style="width: 18rem;">
-      <img src="../../assets/Demo.png" class="card-img-top" alt="...">
-      <div class="card-body">
-          <h5 class="card-title">{{coursedatas.CourseName}}</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-     </div>
+<div class="spinners" *ngIf="object">
+  <div class="d-flex justify-content-center">
+    <div class="spinner-grow text-info" style="width: 5rem; height: 5rem;" role="status">
+      <span class="sr-only">Loading...</span>
     </div>
   </div>
 </div>
 
-
-<div class="showCourses" *ngIf="exploreCourses">
-  <div class="courses" *ngFor="let coursedatas of coursedata['course']">
-    <div class="card" style="width: 18rem;">
-      <img src="../../assets/demo1.png" class="card-img-top" alt="...">
-      <div class="card-body">
-          <h5 class="card-title">{{coursedatas.CourseName}}</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-     </div>
+  <div class="learner" *ngIf="!object">
+    <div >
+      <h4 class="text-success">Enrolled Courses</h4>
+      <p class="text-success">Learn Programing Language  at your own pace & become an expert (skill , Reskill & upskill)</p>
+      <hr  style="border:1px solid rgb(18, 218, 35) ; ">
+  </div>
+    <div class="courses" *ngFor="let coursedatas of enrolledcourses">
+      <div class="card" style="width: 18rem;">
+        <img src="../../assets/images/{{coursedatas.photo}}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{coursedatas.courseName}}</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary" routerLink="topic" (click)="getCourseID(coursedatas.courseID,coursedatas.courseName)">Goto course</a>
+       </div>
+      </div>
     </div>
   </div>
-</div>
+  
+
+  <!-- <div class="card mb-3" style="max-width: 540px;" *ngFor="let coursedatas of enrolledcourses">
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <img src="../../assets/images/{{coursedatas.photo}}" class="card-img" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{coursedatas.courseName}}</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <a href="#" class="btn btn-primary">Goto course</a>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+    </div>
+  </div> -->

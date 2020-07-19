@@ -1,0 +1,41 @@
+<div class="quiz-class" *ngIf="googleID" >
+    <br>
+    <div class="quiz">
+        <h3 style="color: rgb(3, 136, 136);" >You're almost ready to start!</h3>
+        <h6>Developed with ♥ in India</h6>
+        <img style="width: 250px; height: 160px;" src="https://images.thequint.com/thequint%2F2019-11%2F259d8fb8-a1ec-4f8f-b2bb-030651b71b46%2FiStock_973102672.jpg?auto=format%2Ccompress&format=webp&w=480&dpr=2.6" alt="">
+        
+          <div class="form-group"  *ngIf="!quizID">
+            <label for="exampleFormControlSelect1"></label>
+            <select class="form-control" id="exampleFormControlSelect1">
+                <option selected>Select courses</option>
+              <option>Machine learning</option>
+              <option>Artificial Intelligence</option>
+              <option>Data structures</option>
+              <option>Object Oriented programming</option>
+              <option>Data science</option>
+            </select>
+          </div>
+          <br>
+          <br>
+          <div class="alert alert-primary" role="alert" *ngIf="quizID" >
+            This is a <u>{{topicName}} quiz</u>
+          </div>
+          
+        <button class="btn btn-primary" style="margin : 20px;" routerLink="questions">Start Quiz</button>
+    </div>
+</div>
+
+
+<div class="quiz-class" *ngIf="!googleID" >
+  <br>
+  <div class="quiz">
+      <h3 style="color: rgb(250, 119, 137);" >Please Login !</h3>
+      <h6>Developed with ♥ in India</h6>
+      <br>
+      <img style="width: 250px; height: 160px;" src="https://images.thequint.com/thequint%2F2019-11%2F259d8fb8-a1ec-4f8f-b2bb-030651b71b46%2FiStock_973102672.jpg?auto=format%2Ccompress&format=webp&w=480&dpr=2.6" alt="">
+      <br>
+      <br>
+      <br>
+    </div>
+</div>

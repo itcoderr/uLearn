@@ -78,7 +78,7 @@ export class ELearningNavbarComponent implements OnInit{
   }
   sendSignOutObject(){
       localStorage.clear();
-     this.apiService.signout(this.customer1).subscribe((res)=>{
+      this.apiService.signout(this.customer1).subscribe((res)=>{
       this.errormsg = res;
     });
 
@@ -93,6 +93,7 @@ export class ELearningNavbarComponent implements OnInit{
 
   signOut(): void {
     this.authService.signOut();
+    window.location.reload();
   }
 
 

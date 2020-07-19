@@ -1,0 +1,87 @@
+<!-- The content below is only a placeholder and can be replaced.
+<div class="container">
+
+    <div style="text-align: center;"><br/><br/>   
+      <input class="btn btn-success" type="button" value="Print" (click)="convetToPDF()"/>
+    </div>
+   <pre>
+   
+    <div id="content">
+       
+    </div>
+  
+  </pre>
+  </div>
+
+
+
+  <div id="contentToConvert" >
+       
+       
+    <div style="width:850px; height:1060px; padding:20px; text-align:center; background-image: url('/assets/d12.jpg'); background-repeat: no-repeat;
+    background-size: 100% 100% " class="bg-light">
+      <br/><br/><br/><br/>
+           <h1 style="font-size:44px; font-weight:bold ; font-family:Algerian ; color: #16d30f" class="text-danger" ><i>Certificate of Completion</i></h1>
+           <p style="font-size:35px" ><i>This is to certify that</i></p>
+           <p style="font-size:40px;font-family:Footlight MT Light" class="text-danger"><b>Pallavi Kanaki</b></p>
+           <p style="font-size:35px"><i>has completed the course</i></p>
+           <p style="font-size:40px;font-family:Footlight MT Light" class="text-danger"><b>Python</b></p>
+           <p style="font-size:35px" ><i>with score of </i> <b class="text-danger"  style="font-family:Footlight MT Light">99%</b></p> 
+           <p style="font-size:35px"><i>dated</i></p>
+           <p  style="font-size:35px;font-family:Footlight MT Light" class="text-danger"><b>10 jun 2020</b></p>   
+    </div>
+    
+</div> -->
+
+<div style="margin-left: 50px; margin-top: 10px; margin-right: 50px;">
+    <h4 class="text-success">Certificate of Achievement</h4>
+    <p class="text-success">Continue your learning with the best teachers & become an expert (skill , Reskill & upskill)</p>
+    <hr  style="border:1px solid rgb(18, 218, 35) ; ">
+</div>
+
+<div class="card" style="width: 18rem;" *ngFor="let cert of ['1','2','3']" >
+    <img src="../../assets/cert.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Artificial Intelligence {{cert}} </h5>
+      <p class="card-text">Artificial Intelligence course has been succesfully completed and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Show</a>
+      <a href="#" class="btn btn-primary"  style="float: right;" (click)="convetToPDF()">Download</a>
+    </div>
+  </div>
+
+
+<!-- Button trigger modal -->
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Certificate of Achievement</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div id="contentToConvert" >
+                <div style="width:1100px; height:450px; padding:20px; text-align:center; background-image: url('../../assets/d12.jpg'); background-repeat: no-repeat;
+                background-size: 100% 100% " class="bg-light">
+                  <br/><br/><br/><br/>
+                       <h1 style="font-size:44px; font-weight:bold ; font-family:Algerian ; color: #16d30f" class="text-danger" ><i>Certificate of Completion</i></h1>
+                       <p style="font-size: 30px" > <i>This is to certify that </i>
+                        <u><b>Pallavi Kanaki</b> </u><br>
+                       <i>has completed the course </i>
+                         <u><b>Python</b></u><br>
+                       <i>with score of </i>  <u><b>99%</b></u> <br> <i>on </i>
+                        <b>10 jun 2020</b>  </p>
+                </div>
+                
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary"  (click)="convetToPDF()">Download</button>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,16 @@
+.quiz{
+    margin: 30px;
+    padding-left: 100px;
+    padding-top: 30px;
+    padding-right: 100px;
+    margin-left: 350px;
+    width: 700px;
+    background-color: white;
+    text-align: center;
+}
+
+.quiz-class{
+    align-items: center;
+    background-color: rgb(170, 217, 255);
+    height: 650px;
+}

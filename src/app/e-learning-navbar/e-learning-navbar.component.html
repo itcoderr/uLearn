@@ -13,19 +13,8 @@
         <li class="nav-item active">
           <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
         </li>
-        
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Courses
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">C</a>
-            <a class="dropdown-item" href="#">C++</a>
-            <a class="dropdown-item" href="#">Python</a>
-            <a class="dropdown-item" href="#">Java</a>
-            <a class="dropdown-item" href="#">Angular</a>
-            <a class="dropdown-item" href="#">Java Script</a>
-          </div>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="allcourses" >Courses</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">About us</a>
@@ -47,155 +36,12 @@
        <div *ngIf=" user ? sso():false"></div>
      
     
-      <button *ngIf="user" routerLink="dashboard" class="btn btn-info" id="dashboard">My Profile</button>
+      <button *ngIf="user" routerLink="student" class="btn btn-info" id="dashboard">My Profile</button>
     
 
-    <!---
-      <h6 class="card-header">
-      Social Login Demo
-    </h6>
-    <div class="card-block"></div>
-    <img *ngIf="user.photoUrl" class="email-photo" src="{{ user.photoUrl }}">
-    <div class="card-block">
-      <h4 class="card-title">{{ user.name }}</h4>
-      <p class="card-text">{{ user.email }}</p>
-    </div>
-    <div class="card-block">
-      
-    </div>
-    -->
     
     <button *ngIf="user" class="btn btn-danger" routerLink="" (click)="signOut();sendSignOutObject();">Sign out {{ user.name }}</button>
 
   </nav>
 
 
-
- 
-  
-
-
-
-
-
-
-  <!--Sign in Modal   
-    
-    
-    <div class="modal fade" id="exampleModalSignin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Sign In</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-            <form>
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="abc@example.com" aria-describedby="emailHelp">
-                </div>
-                <div class="form-group">
-                  <label for="exampleInputPassword1">Password</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1">
-                  <small id="emailHelp" class="form-text text-muted">We'll never share your email & password with anyone else.</small>
-                </div>
-                <div class="form-group form-check">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                  <label class="form-check-label" for="exampleCheck1">Remember me</label>
-                </div>
-                <p style="color: rgb(165, 165, 165);">------------------------------------ or ---------------------------------</p>
-                <button type="button" class="btn btn-outline-info"> <img src="../../assets/google-icon.PNG" alt=""> Sign in with Google</button>
-              </form>          
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary">Sign In</button>
-        </div>
-      </div>
-    </div>
-  </div>
--->
-
-
-
-<!--Sign up Modal
-  
-  <div class="modal fade" id="exampleModalSignup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Sign Up</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-                  <form>
-      <div class="form-row">
-          <div class="form-group col-md-6">
-          <label for="inputName">User Name</label>
-          <input type="text" class="form-control" id="inputName"> 
-          </div>
-          <div class="form-group col-md-6">
-             <label for="inputEmail4">Email Id</label>
-          <input type="email" class="form-control" id="inputEmail4" placeholder="abc@example.com">
-          </div>
-      </div>
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="signup-password">Password</label>
-          <input type="password" class="form-control" id="signup-password">
-        </div>
-        <div class="form-group col-md-6">
-          <label for="signup-confirm_password">Confirm Password</label>
-          <input type="password" class="form-control" id="signup-confirm_password" (change)="validatePassword()" >
-          <div *ngIf="alert" class="alert alert-danger" role="alert" style="width: 300px;"> 
-            Passwords don't match !!
-          </div>
-        </div>
-      </div>
-      <div class="form-row">
-        <label id="Gender">Male
-          <input type="radio" checked="checked" name="radio">
-        </label>
-        <label id="Gender">Female
-          <input type="radio" name="radio">
-        </label>
-        <label id="Gender">Other
-          <input type="radio" name="radio">
-        </label>
-      </div>
-      <div class="form-group">
-          <label for="inputAddress">Address Line 1</label>
-          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-      </div>
-      <div class="form-row">
-          <div class="form-group col-md-6">
-          <label for="inputCity">City</label>
-          <input type="text" class="form-control" id="inputCity">
-          </div>
-          <div class="form-group col-md-4">
-          <label for="inputState">State</label>
-          <input type="text" class="form-control" id="inputState">
-          </div>
-      </div>
-      <div class="form-group">
-          <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="gridCheck">
-          <label class="form-check-label" for="gridCheck">
-              I agree to terms & conditions !!
-          </label>
-          </div>
-      </div>
-      </form>      
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" >Sign Up</button>
-      </div>
-    </div>
-  </div>
-</div> -->
-
-  

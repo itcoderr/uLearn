@@ -3,6 +3,22 @@
     padding: 15px;
     margin-bottom: 20px;
 }
-.card{
-    background-image: linear-gradient(to right top, #eec789, #e7d199, #e2daaa, #e0e2bd, #e1e9cf);
+
+.learner{
+    margin-left: 40px;
+    margin-top: 10px;
+}
+
+img{
+    height: 200px;
+}
+
+.spinners{
+    height: 350px;
+    width: 1000x;
+    text-align: center;
+}
+
+.d-flex.justify-content-center{
+    margin-top: 200px;
 }

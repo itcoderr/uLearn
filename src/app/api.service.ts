@@ -43,6 +43,22 @@ public enrollcourses(googleid : string,courseid : string){
   return this.httpClient.post(`http://localhost:8080/enrollcourses?googleID=${googleid}&courseID=${courseid}`, httpOptions).toPromise();
 }
 
+public getenrollcourses(googleid : string){
+  return this.httpClient.get(`http://localhost:8080/getenrolledcourses?googleID=${googleid}`, httpOptions).toPromise();
+}
+
+public getcoursedetails(courseid : string){
+  return this.httpClient.get(`http://localhost:8080/getcoursedetails?courseID=${courseid}`, httpOptions).toPromise();
+}
+
+public getquestions(quizid : string){
+  return this.httpClient.get(`http://localhost:8080/getquestions?quizID=${quizid}`, httpOptions).toPromise();
+}
+
+public submitquiz(googleid : string,quizid : string){
+  return this.httpClient.post(`http://localhost:8080/submitquiz?googleID=${googleid}&quizID=${quizid}`, httpOptions).toPromise();
+}
+
 public deleteUser(googleID : string){
   return this.httpClient.delete('http://localhost:8080/delete', httpOptions);
 }

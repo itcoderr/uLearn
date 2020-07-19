@@ -16,7 +16,7 @@ export class AllcoursesComponent implements OnInit {
   googleName : string;
   courseID : string;
   courseName : string;
-  
+  id : boolean =true;
   
   constructor(private apiService: ApiService) { }
 
@@ -64,21 +64,35 @@ export class AllcoursesComponent implements OnInit {
   }
 
   async getgoogleID(cid : string){
-    this.courseID = cid ;
     this.googleID = localStorage.getItem('googleID');
-    this.googleName = localStorage.getItem('name');
-    localStorage.setItem('courseID' , this.courseID);
-    console.log(this.googleID+' '+this.courseID);
-    var res : any;
-    res = await this.apiService.enrollcourses(this.googleID,this.courseID);
-    console.log(res + ' ' + this.googleID);
+    if(this.googleID==null){
+      this.id=false;
+    }
+    else{
+      this.id=true;
+      this.courseID = cid ;
+      this.googleName = localStorage.getItem('name');
+      localStorage.setItem('courseID' , this.courseID);
+      console.log(this.googleID+' '+this.courseID);
+      var res : any;
+      res = await this.apiService.enrollcourses(this.googleID,this.courseID);
+      console.log(res + ' ' + this.googleID);
+    }
   }
 
   getCourseID(cid : string ,cname : string){
-    this.courseID = cid ; 
-    this.courseName = cname ; 
-    localStorage.setItem('courseID' , this.courseID);
-    localStorage.setItem('courseName' , this.courseName);
+    this.googleID = localStorage.getItem('googleID');
+    if(this.googleID==null){
+      this.id=false;
+    }
+    else{
+      this.id=true;
+      this.courseID = cid ; 
+      this.courseName = cname ; 
+      localStorage.setItem('courseID' , this.courseID);
+      localStorage.setItem('courseName' , this.courseName);
+    }
+    
   }
 
 }

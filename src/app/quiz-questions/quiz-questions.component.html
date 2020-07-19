@@ -1,0 +1,38 @@
+<div class="quiz-class" *ngIf="googleID" > 
+    <br>
+    <div class="quiz" >
+        <h3 style="color: rgb(3, 136, 136);" >Question {{question}} of 5</h3>
+        <br><br>
+        <div class="quizoptions">
+        <h5>Q{{question}}. {{questions[question-1].ques}}</h5>
+        <br>
+        <div class="options" *ngIf="quizoptions" >
+            <button type="button" class="{{class1}}" (click)="option1()" >A. {{questions[question-1].option1}}</button>
+            <button type="button" class="{{class2}}" style="float: right;" (click)="option2()">B. {{questions[question-1].option2}}</button>
+            <br>
+            <br>
+            <button type="button" class="{{class3}}" (click)="option3()">C. {{questions[question-1].option3}}</button>
+            <button type="button" class="{{class4}}" style="float: right;" (click)="option4()">D. {{questions[question-1].option4}}</button>
+        </div>
+        <div class="options" *ngIf="!quizoptions">
+            <button type="button" class="{{class1}}" disabled>A. {{questions[question-1].option1}}</button>
+            <button type="button" class="{{class2}}" style="float: right;" disabled>B. {{questions[question-1].option2}}</button>
+            <br>
+            <br>
+            <button type="button" class="{{class3}}" disabled>C. {{questions[question-1].option3}}</button>
+            <button type="button" class="{{class4}}" style="float: right;" disabled>D. {{questions[question-1].option4}}</button>
+        </div>
+            <br>
+
+        
+        </div>
+        <ng-container *ngIf="question < 5">
+            <button class="btn btn-primary" style="margin : 40px; margin-right: -600px; " (click)="nextqsn()">Next Question</button>
+        </ng-container>
+        <ng-container *ngIf="question >= 5" >
+            <button class="btn btn-danger" routerLink="submit" style="margin : 40px; margin-right: -600px; " (click)="submit()">Submit Test</button>
+        </ng-container>
+        
+    </div>
+    <br>
+</div>
